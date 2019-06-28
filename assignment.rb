@@ -1,4 +1,5 @@
 require 'pry'
+require 'benchmark'
 dictionary_list = []
 
 def convert(input)
@@ -77,4 +78,4 @@ dictionary_hash.each do |word, number|
 end
 print "Enter the number: "
 input = gets.to_s
-convert(input)
+puts Benchmark.measure { convert(input) }
