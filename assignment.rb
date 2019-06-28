@@ -79,5 +79,10 @@ end
 while 1
 	print "Enter the number: "
 	input = gets.to_s
-	convert(input)
+	if input.match(/(0|1)/)
+		puts "Invalid input. Try again"
+		next
+	else
+		convert(input)
+	end
 end
