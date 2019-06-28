@@ -28,8 +28,19 @@ def convert(input)
 			puts (len5[i] + len5[j])
 		end
 	end
-	binding.pry
-	p ""
+	len4.each do |word4|
+		len6.each do |word6|
+			puts (word4 + word6)
+			puts (word6 + word4)
+		end
+	end
+	len3.each do |word3|
+		len7.each do |word7|
+			puts (word3 + word7)
+			puts (word7 + word3)
+		end
+	end
+	binding.pry p ""
 end
 
 File.open("dictionary.txt", "r") do |f|
