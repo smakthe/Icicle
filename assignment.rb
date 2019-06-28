@@ -25,31 +25,32 @@ def convert(input)
 	len10.each { |word| puts word}
 	for i in 0...len5.length
 		for j in 0...len5.length
-			puts (len5[i] + len5[j])
+			puts (len5[i] + len5[j]).gsub("\n", ", ")[0..-3]
 		end
 	end
 	len4.each do |word4|
 		len6.each do |word6|
-			puts (word4 + word6)
-			puts (word6 + word4)
+			puts (word4 + word6).gsub("\n", ", ")[0..-3]
+			puts (word6 + word4).gsub("\n", ", ")[0..-3]
 		end
 	end
 	len3.each do |word3|
 		len7.each do |word7|
-			puts (word3 + word7)
-			puts (word7 + word3)
+			puts (word3 + word7).gsub("\n", ", ")[0..-3]
+			puts (word7 + word3).gsub("\n", ", ")[0..-3]
 		end
 	end
 	len4.each do |word|
 		for i in 0...len3.length
 			for j in 0...len3.length
-				puts (len3[i] + len3[j] + word)
-				puts (len3[i] + word + len3[j])
-				puts (word + len3[i] + len3[j])
+				puts (len3[i] + len3[j] + word).gsub("\n", ", ")[0..-3]
+				puts (len3[i] + word + len3[j]).gsub("\n", ", ")[0..-3]
+				puts (word + len3[i] + len3[j]).gsub("\n", ", ")[0..-3]
 			end
 		end
 	end
 	binding.pry
+	p ""
 end
 
 File.open("dictionary.txt", "r") do |f|
