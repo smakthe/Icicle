@@ -16,3 +16,8 @@ dictionary_list.each do |letter|
 																	.gsub(/(T|U|V)/, "8")										 
 																	.gsub(/(W|X|Y|Z)/, "9")
 end
+dictionary_hash.each do |word, number|
+	if word.length < 4 || word.length == 9 || word.length == 10 || word.length > 11 
+		dictionary_hash.delete(word)
+	end
+end
