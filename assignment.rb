@@ -22,6 +22,7 @@ def convert(input)
 		len7 << result if result.length == 8
 		len10 << result if result.length == 11
 	end
+	len10.each { |word| puts word}
 	binding.pry
 	p ""
 end
