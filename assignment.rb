@@ -40,7 +40,16 @@ def convert(input)
 			puts (word7 + word3)
 		end
 	end
-	binding.pry p ""
+	len4.each do |word|
+		for i in 0...len3.length
+			for j in 0...len3.length
+				puts (len3[i] + len3[j] + word)
+				puts (len3[i] + word + len3[j])
+				puts (word + len3[i] + len3[j])
+			end
+		end
+	end
+	binding.pry
 end
 
 File.open("dictionary.txt", "r") do |f|
