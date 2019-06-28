@@ -8,6 +8,20 @@ def convert(input)
 			results << word
 		end
 	end
+	len3 = []
+	len4 = []
+	len5 = []
+	len6 = []
+	len7 = []
+	len10 = []
+	results.each do |result|
+		len3 << result if result.length == 4
+		len4 << result if result.length == 5
+		len5 << result if result.length == 6
+		len6 << result if result.length == 7
+		len7 << result if result.length == 8
+		len10 << result if result.length == 11
+	end
 	binding.pry
 	p ""
 end
