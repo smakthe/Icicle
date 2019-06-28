@@ -1,4 +1,17 @@
+require 'pry'
 dictionary_list = []
+
+def convert(input)
+	results = []
+	dictionary_hash.each do |word, number|
+		if input.match(number.gsub("\n", ""))
+			results << word
+		end
+	end
+	binding.pry
+	p ""
+end
+
 File.open("dictionary.txt", "r") do |f|
 	f.each do |i|
 		dictionary_list << i
@@ -21,3 +34,6 @@ dictionary_hash.each do |word, number|
 		dictionary_hash.delete(word)
 	end
 end
+print "Enter the number: "
+input = gets.to_s
+convert(input)
