@@ -1,6 +1,3 @@
-require 'pry'
-require 'benchmark'
-
 def all_results(input)
 	results = []
 	$dictionary_hash.each do |word, number|
@@ -54,8 +51,6 @@ def convert(input)
 			end
 		end
 	end
-	binding.pry
-	p ""
 end
 
 dictionary_list = []
@@ -81,6 +76,8 @@ $dictionary_hash.each do |word, number|
 		$dictionary_hash.delete(word)
 	end
 end
-print "Enter the number: "
-input = gets.to_s
-puts Benchmark.measure { convert(input) }
+while 1
+	print "Enter the number: "
+	input = gets.to_s
+	convert(input)
+end
