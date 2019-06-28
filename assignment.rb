@@ -23,6 +23,11 @@ def convert(input)
 		len10 << result if result.length == 11
 	end
 	len10.each { |word| puts word}
+	for i in 0...len5.length
+		for j in 0...len5.length
+			puts (len5[i] + len5[j])
+		end
+	end
 	binding.pry
 	p ""
 end
